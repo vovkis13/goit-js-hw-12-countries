@@ -5,6 +5,6 @@ export default class {
   goFetch(name) {
     return fetch(URL + name)
       .then(r => r.json())
-      .catch(e => console.log);
+      .catch(alert);
   }
 }

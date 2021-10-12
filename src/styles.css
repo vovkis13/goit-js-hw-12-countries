@@ -1,46 +1,69 @@
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 40px;
 }
 img {
-    display: block;
+  display: block;
+}
+p,
+ul,
+h2 {
+  margin: 0;
 }
 .input {
-    display: block;
-    width: 300px;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto; 
-    border: solid 2px blue  ;
-    border-radius: 4px;
-    color: blue;
+  display: block;
+  width: 40vw;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  border-radius: 4px;
 
-    font-size: 30px;
+  font-size: 30px;
 }
 .container {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 40vw;
+  display: flex;
+  justify-content: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 .countries {
-    font-size: 30px;
+  font-size: 30px;
+}
+.card {
+  width: 100%;
+  font-size: 30px;
 }
 .card__title {
-    text-align: center;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 50px;
 }
 .card__content {
-    display: flex;
-    justify-content: space-between;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
 }
 
-.card__left .card__right {
+.card__left {
+  width: 50%;
+}
+.card__right {
+  width: 50%;
 }
 
 .card__flag {
-    width: 300px;
+  width: 100%;
+}
+
+.card__caption {
+  font-weight: bold;
+}
+.card__data {
+  font-weight: normal;
 }

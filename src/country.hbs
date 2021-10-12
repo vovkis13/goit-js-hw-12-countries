@@ -4,7 +4,8 @@
         <div class="card__left">
             <p class="card__caption">Capital: <span class="card__data">{{capital}}</span></p>
             <p class="card__caption">Population: <span class="card__data">{{population}}</span></p>
-            <ul class="card__caption">Languages:
+            <p class="card__caption">Languages: </p>
+            <ul>
                 {{#each languages}}
                 <li class="card__data">{{this.name}}</li>
                 {{/each}}
