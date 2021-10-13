@@ -3,13 +3,20 @@ import FetchCountries from './fetchCountries';
 import markupCountriesList from '../countries.hbs';
 import markupCountryCard from '../country.hbs';
 
-import { notice } from '../../node_modules/@pnotify/core/';
+import { notice, info } from '../../node_modules/@pnotify/core/';
 import '../../node_modules/@pnotify/core/dist/PNotify.css';
 import '../../node_modules/@pnotify/core/dist/BrightTheme.css';
 const noticeOptions = {
   title: 'More than 10 matches!',
+  text: 'Please enter a more specific query.',
   delay: 2000,
 };
+const infoOptions = {
+  title: 'No matches!',
+  text: 'Please enter another query.',
+  delay: 2000,
+};
+
 const debounce = require('lodash.debounce');
 const DELAY = 500;
 const { inputRef, resultsRef } = refs;
@@ -34,6 +41,9 @@ function handleResults(countries) {
     renderResults(markupCountriesList({ countries }));
   } else if (countries.length === 1) {
     renderResults(markupCountryCard(...countries));
+  } else {
+    info(infoOptions);
+    clearResults();
   }
 }
 
