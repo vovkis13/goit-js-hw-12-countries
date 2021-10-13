@@ -8,15 +8,14 @@ import '../../node_modules/@pnotify/core/dist/PNotify.css';
 import '../../node_modules/@pnotify/core/dist/BrightTheme.css';
 const noticeOptions = {
   title: 'More than 10 matches!',
-  text: 'More than 10 countries found',
   delay: 2000,
 };
-
 const debounce = require('lodash.debounce');
+const DELAY = 500;
 const { inputRef, resultsRef } = refs;
 const fetchCountries = new FetchCountries();
 
-inputRef.addEventListener('input', debounce(onInputText, 500));
+inputRef.addEventListener('input', debounce(onInputText, DELAY));
 
 function onInputText(e) {
   e.preventDefault();
@@ -30,13 +29,12 @@ function onInputText(e) {
 function handleResults(countries) {
   if (countries.length > 10) {
     notice(noticeOptions);
-    console.log('Too much!!!');
     clearResults();
   } else if (countries.length > 1) {
     renderResults(markupCountriesList({ countries }));
   } else if (countries.length === 1) {
     renderResults(markupCountryCard(...countries));
-  } else clearResults();
+  }
 }
 
 function renderResults(markup) {

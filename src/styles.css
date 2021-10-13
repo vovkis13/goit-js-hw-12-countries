@@ -2,26 +2,30 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: rgba(175, 175, 169, 0.667);
   padding: 40px;
+
 }
-img {
-  display: block;
-}
+
 p,
 ul,
 h2 {
   margin: 0;
 }
+
 .input {
   display: block;
   width: 40vw;
-  height: 40px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+  padding: 20px;
   border-radius: 4px;
 
   font-size: 30px;
+  line-height: 1.13;
+  letter-spacing: 0.02em;
+
 }
 .container {
   width: 40vw;
@@ -50,9 +54,7 @@ h2 {
   width: 40vw;
 }
 
-.card__left {
-  width: 50%;
-}
+.card__left,
 .card__right {
   width: 50%;
 }
@@ -62,6 +64,7 @@ h2 {
 }
 
 .card__caption {
+  margin-bottom: 10px;
   font-weight: bold;
 }
 .card__data {
